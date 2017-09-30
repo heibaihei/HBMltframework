@@ -1,0 +1,16 @@
+prefix=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework
+exec_prefix=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework
+libdir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/lib
+includedir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/include
+datadir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/share
+mandir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/share/man
+version=6.4.0
+cflags=-I/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/include -I/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/include/mlt++ -D_REENTRANT
+libs=-L/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/lib -lmlt++
+
+Name: mlt++
+Description: C++ API for MLT multimedia framework
+Version: ${version}
+Requires: mlt-framework
+Libs: -L${libdir} ${libs}
+Cflags: ${cflags}

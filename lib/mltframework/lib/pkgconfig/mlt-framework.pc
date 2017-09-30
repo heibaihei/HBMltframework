@@ -1,0 +1,19 @@
+prefix=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework
+exec_prefix=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework
+libdir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/lib
+includedir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/include
+datadir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/share
+mandir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/share/man
+version=6.4.0
+cflags=-I/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/include -I/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/include/mlt -D_REENTRANT
+libs=-L/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/lib -lmlt
+moduledir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/lib/mlt
+mltdatadir=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/share/mlt
+meltbin=/Users/zj-db0519/work/code/github/HBMltframework/thirdparty/mlt-6.4.0/../../lib/mltframework/bin/melt
+
+Name: mlt-framework
+Description: MLT multimedia framework
+Version: ${version}
+Requires:
+Libs: -L${libdir} ${libs}
+Cflags: ${cflags}
