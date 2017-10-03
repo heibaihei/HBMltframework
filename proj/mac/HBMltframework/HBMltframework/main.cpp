@@ -8,8 +8,22 @@
 
 #include <iostream>
 
+#include "MltProfile.h"
+#include "MltFactory.h"
+#include "MltProducer.h"
+#include "MltConsumer.h"
+
+using namespace Mlt;
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Factory::init( NULL );
+    Profile profile;
+    Producer producer( profile, argv[ 1 ] );
+    Consumer consumer( profile, "xgl" );
+    consumer.set( "rescale", "none" );
+    consumer.connect( producer );
+    consumer.run( );
+    
     return 0;
 }

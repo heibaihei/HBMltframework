@@ -1,5 +1,6 @@
 
 #include <Mlt.h>
+
 using namespace Mlt;
 
 int main( int, char **argv )

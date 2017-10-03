@@ -352,6 +352,8 @@
 		A18C65D01F7E4EE2001C48C7 /* test_tractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18C64751F7E4EE2001C48C7 /* test_tractor.cpp */; };
 		A18C65D11F7E4EE2001C48C7 /* fnmatch.c in Sources */ = {isa = PBXBuildFile; fileRef = A18C64791F7E4EE2001C48C7 /* fnmatch.c */; };
 		A18C65D21F7E4EE2001C48C7 /* win32.c in Sources */ = {isa = PBXBuildFile; fileRef = A18C647B1F7E4EE2001C48C7 /* win32.c */; };
+		A1A541911F8313B0004981B7 /* libmlt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A5418F1F8313B0004981B7 /* libmlt.dylib */; };
+		A1A541921F8313B0004981B7 /* libmlt++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A541901F8313B0004981B7 /* libmlt++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1316,6 +1318,10 @@
 		A18C64791F7E4EE2001C48C7 /* fnmatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fnmatch.c; sourceTree = "<group>"; };
 		A18C647A1F7E4EE2001C48C7 /* fnmatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fnmatch.h; sourceTree = "<group>"; };
 		A18C647B1F7E4EE2001C48C7 /* win32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = win32.c; sourceTree = "<group>"; };
+		A1A5418B1F831292004981B7 /* libmlt.6.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmlt.6.4.0.dylib; path = ../../../lib/mltframework/lib/libmlt.6.4.0.dylib; sourceTree = "<group>"; };
+		A1A5418D1F831295004981B7 /* libmlt++.6.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmlt++.6.4.0.dylib"; path = "../../../lib/mltframework/lib/libmlt++.6.4.0.dylib"; sourceTree = "<group>"; };
+		A1A5418F1F8313B0004981B7 /* libmlt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmlt.dylib; path = ../../../lib/mltframework/lib/libmlt.dylib; sourceTree = "<group>"; };
+		A1A541901F8313B0004981B7 /* libmlt++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmlt++.dylib"; path = "../../../lib/mltframework/lib/libmlt++.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1323,6 +1329,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A541911F8313B0004981B7 /* libmlt.dylib in Frameworks */,
+				A1A541921F8313B0004981B7 /* libmlt++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1342,6 +1350,7 @@
 				A18C60561F7E4DA8001C48C7 /* HBMltframework */,
 				A18C60631F7E4E89001C48C7 /* MltframeworkSrc */,
 				A18C60551F7E4DA8001C48C7 /* Products */,
+				A1A5418A1F831292004981B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3163,6 +3172,17 @@
 			path = win32;
 			sourceTree = "<group>";
 		};
+		A1A5418A1F831292004981B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1A5418F1F8313B0004981B7 /* libmlt.dylib */,
+				A1A541901F8313B0004981B7 /* libmlt++.dylib */,
+				A1A5418D1F831295004981B7 /* libmlt++.6.4.0.dylib */,
+				A1A5418B1F831292004981B7 /* libmlt.6.4.0.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
@@ -3714,6 +3734,11 @@
 		A18C605C1F7E4DA8001C48C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../lib/mltframework/include\"",
+					"\"$(SRCROOT)/../../../lib/mltframework/include/mlt\"",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../lib/mltframework/lib\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3721,6 +3746,11 @@
 		A18C605D1F7E4DA8001C48C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../lib/mltframework/include\"",
+					"\"$(SRCROOT)/../../../lib/mltframework/include/mlt\"",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../lib/mltframework/lib\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -3801,6 +3831,7 @@
 				A18C65D51F7E4FD9001C48C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
